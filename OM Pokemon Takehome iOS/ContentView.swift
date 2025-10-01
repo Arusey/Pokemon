@@ -8,17 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    let viewModel: PokemonListViewModel
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        PokemonListView(viewModel: viewModel)
     }
 }
 
-#Preview {
-    ContentView()
-}
+ 

@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct OM_Pokemon_Takehome_iOSApp: App {
+    private let dependencies = AppDependencies()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PokemonListView(viewModel: PokemonListViewModel(service: dependencies.pokemonService))
         }
     }
 }
